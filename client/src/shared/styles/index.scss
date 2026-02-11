@@ -6,5 +6,7 @@
 @use './base/reset';
 @use './base/global';
 
+@use './utilities/srOnly';
+
 @use './themes/light';
 @use './themes/dark';

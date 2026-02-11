@@ -1,0 +1,77 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+
+  .inputControl {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid var(--color-border);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    transition: border-color ease 0.2s;
+    background-color: var(--color-bg-container);
+
+    .input {
+      width: 100%;
+      color: inherit;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+    }
+
+    .stateIcon,
+    .togglePassword {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-size: var(--text-sm);
+      padding: 0;
+      color: var(--color-subtext);
+      position: absolute;
+      right: var(--space-3);
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity ease 0.2s;
+    }
+
+    .togglePassword {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    &:focus-within {
+      border-color: var(--color-border-focus);
+
+      .togglePassword {
+        opacity: 1;
+      }
+    }
+
+    &:has(svg) {
+      .input {
+        padding-right: var(--space-6);
+      }
+    }
+  }
+
+  .message {
+    font-size: var(--text-sm);
+  }
+}
+
+.inputWrapper.error {
+  .inputControl {
+    border-color: var(--color-error);
+
+    .stateIcon {
+      color: var(--color-error);
+    }
+  }
+
+  .message {
+    color: var(--color-error);
+  }
+}

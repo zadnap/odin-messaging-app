@@ -2,19 +2,23 @@
 
 :root,
 [data-theme='light'] {
-  --color-primary: #{$blue-500};
-  --color-primary-hover: #{$blue-600};
-  --color-primary-active: #{$blue-700};
+  --color-primary: #{$black};
+  --color-primary-hover: #{$gray-900};
+  --color-primary-active: #{$black};
 
-  --color-bg-page: #{$blue-100};
+  --color-accent: #{$blue-500};
+  --color-accent-hover: #{$blue-600};
+  --color-accent-active: #{$blue-700};
+
+  --color-bg-page: #{$gray-50};
   --color-bg-container: #{$white};
-  --color-bg-surface: #{$gray-50};
+  --color-bg-surface: #{$gray-100};
 
-  --color-text: #{$gray-900};
+  --color-text: #{$black};
   --color-subtext: #{$gray-500};
 
   --color-border: #{$gray-300};
-  --color-divider: #{$gray-400};
+  --color-border-focus: var(--color-accent);
 
   --color-warning-bg: #{$yellow-100};
   --color-warning: #{$yellow-500};
@@ -23,4 +27,7 @@
   --color-error-bg: #{$red-100};
   --color-error: #{$red-500};
   --color-error-hover: #{$red-600};
+
+  --color-danger: var(--color-error);
+  --color-danger-hover: var(--color-error-bg);
 }
