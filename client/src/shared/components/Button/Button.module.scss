@@ -41,11 +41,11 @@
     border: 1px solid var(--color-border);
 
     &:hover:not(:disabled) {
-      background-color: var(--color-bg-surface);
+      background-color: var(--color-btn-outline-hover);
     }
 
     &:active:not(:disabled) {
-      background-color: var(--color-bg-page);
+      background-color: var(--color-btn-outline-active);
     }
   }
 

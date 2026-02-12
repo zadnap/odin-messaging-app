@@ -31,6 +31,9 @@
   --color-danger: var(--color-error);
   --color-danger-hover: var(--color-error-bg);
 
+  --color-btn-outline-hover: #{$gray-100};
+  --color-btn-outline-active: #{$gray-200};
+
   --color-text-on-dark: #{$white};
   --color-subtext-on-dark: #{$gray-200};
   --color-border-on-dark: rgba(255, 255, 255, 0.6);
