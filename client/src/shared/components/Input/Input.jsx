@@ -9,9 +9,7 @@ const Input = ({
   value,
   onChange,
   type = 'text',
-  placeholder,
   label,
-  hideLabel = false,
   status = 'default',
   className = '',
   message = '',
@@ -21,14 +19,6 @@ const Input = ({
 
   return (
     <div className={`${styles.inputWrapper} ${styles[status]}`}>
-      {label && (
-        <label
-          className={`${styles.inputLabel} ${hideLabel ? 'srOnly' : ''}`}
-          htmlFor={id}
-        >
-          {label}
-        </label>
-      )}
       <div
         className={`
           ${styles.inputControl} 
@@ -41,13 +31,22 @@ const Input = ({
           value={value}
           onChange={onChange}
           type={type === 'password' && showPassword ? 'text' : type}
-          placeholder={placeholder}
+          placeholder=" "
           className={styles.input}
           aria-describedby={messageId}
           aria-invalid={status === 'error'}
         />
+        {label && (
+          <label htmlFor={id} className={styles.label}>
+            {label}
+          </label>
+        )}
         {!value && status === 'error' && (
-          <span className={styles.stateIcon} aria-hidden>
+          <span
+            className={styles.stateIcon}
+            aria-hidden
+            data-testid="error-icon"
+          >
             <FontAwesomeIcon icon={faCircleExclamation} />
           </span>
         )}

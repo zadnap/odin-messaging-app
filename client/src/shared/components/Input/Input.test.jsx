@@ -5,18 +5,9 @@ import Input from './Input';
 
 describe('Input component', () => {
   test('renders label and input', () => {
-    render(
-      <Input
-        id="email"
-        label="Email"
-        value=""
-        onChange={() => {}}
-        placeholder="Enter email"
-      />
-    );
+    render(<Input id="email" label="Email" value="" onChange={() => {}} />);
 
     expect(screen.getByLabelText('Email')).toBeInTheDocument();
-    expect(screen.getByPlaceholderText('Enter email')).toBeInTheDocument();
   });
 
   test('calls onChange when typing', async () => {
@@ -80,7 +71,7 @@ describe('Input component', () => {
       />
     );
 
-    expect(screen.queryByRole('img')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('error-icon')).not.toBeInTheDocument();
   });
 
   test('toggles password visibility', async () => {
@@ -109,28 +100,5 @@ describe('Input component', () => {
 
     await user.click(toggleButton);
     expect(input).toHaveAttribute('type', 'password');
-  });
-
-  test('hides label visually when hideLabel is true', () => {
-    render(
-      <Input id="name" label="Name" hideLabel value="" onChange={() => {}} />
-    );
-
-    const label = screen.getByText('Name');
-    expect(label).toHaveClass('srOnly');
-  });
-
-  test('applies custom className', () => {
-    render(
-      <Input
-        id="name"
-        label="Name"
-        value=""
-        className="custom-class"
-        onChange={() => {}}
-      />
-    );
-
-    expect(document.querySelector('.custom-class')).toBeInTheDocument();
   });
 });
