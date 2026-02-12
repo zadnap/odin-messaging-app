@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AppLogo component > matches snapshot 1`] = `
+<div>
+  <div
+    class="_appLogo_103bfa"
+  >
+    <img
+      alt="App logo"
+      loading="lazy"
+      src="logo-mock.png"
+    />
+    <p
+      class="_appName_103bfa"
+    >
+      Sentinel
+    </p>
+  </div>
+</div>
+`;
