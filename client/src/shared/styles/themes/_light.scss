@@ -30,4 +30,9 @@
 
   --color-danger: var(--color-error);
   --color-danger-hover: var(--color-error-bg);
+
+  --color-text-on-dark: #{$white};
+  --color-subtext-on-dark: #{$gray-200};
+  --color-border-on-dark: rgba(255, 255, 255, 0.6);
+  --color-icon-on-dark: #{$white};
 }

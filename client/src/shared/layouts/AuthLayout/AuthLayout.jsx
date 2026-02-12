@@ -5,8 +5,10 @@ import { AuthBanner } from '@/features/auth/components';
 const AuthLayout = () => {
   return (
     <main className={styles.authLayout}>
-      <AuthBanner />
-      <Outlet />
+      <div className={styles.authContainer}>
+        <AuthBanner />
+        <Outlet />
+      </div>
     </main>
   );
 };

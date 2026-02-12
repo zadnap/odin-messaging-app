@@ -1,2 +1,46 @@
 .authBanner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-7) var(--space-6);
+  border-radius: var(--radius-xl);
+  background-image: url('@/features/auth/assets/images/auth-banner.png');
+  background-size: cover;
+  background-position: left;
+  color: var(--color-text-on-dark);
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+
+    .eyebrow {
+      letter-spacing: 2px;
+      font-size: var(--text-xs);
+    }
+
+    .divider {
+      display: block;
+      width: 100px;
+      height: 2px;
+      background-color: var(--color-border-on-dark);
+      border-radius: var(--radius-sm);
+    }
+  }
+
+  .content {
+    h1 {
+      font-size: var(--text-3xl);
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-1);
+      font-weight: var(--font-semibold);
+    }
+
+    p {
+      width: 60%;
+      font-size: var(--text-sm);
+      font-weight: var(--font-thin);
+    }
+  }
 }

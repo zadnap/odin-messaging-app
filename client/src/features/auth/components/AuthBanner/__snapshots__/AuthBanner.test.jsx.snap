@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AuthBanner component > matches snapshot 1`] = `
+<div>
+  <section
+    aria-labelledby="auth-banner-title"
+    class="_authBanner_c8062e"
+  >
+    <header
+      class="_header_c8062e"
+    >
+      <p
+        class="_eyebrow_c8062e"
+      >
+        REAL CONVERSATIONS
+      </p>
+      <span
+        aria-hidden="true"
+        class="_divider_c8062e"
+      />
+    </header>
+    <div
+      class="_content_c8062e"
+    >
+      <h1
+        id="auth-banner-title"
+      >
+        Stay Connected 
+        <br />
+        Anytime, Anywhere
+      </h1>
+      <blockquote>
+        <p>
+          Chat easily, share moments, and stay close to the people that matter.
+        </p>
+      </blockquote>
+    </div>
+  </section>
+</div>
+`;
