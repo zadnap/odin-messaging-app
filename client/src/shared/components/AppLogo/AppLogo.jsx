@@ -1,11 +1,11 @@
 import styles from './AppLogo.module.scss';
 import logo from '@/shared/assets/images/logo.png';
 
-const AppLogo = () => {
+const AppLogo = ({ variant = 'icon', appName }) => {
   return (
-    <div className={styles.appLogo}>
+    <div className={`${styles.appLogo} ${styles[variant]}`}>
       <img src={logo} alt="App logo" loading="lazy" />
-      <p className={styles.appName}>Sentinel</p>
+      {variant === 'withText' && <p className={styles.appName}>{appName}</p>}
     </div>
   );
 };

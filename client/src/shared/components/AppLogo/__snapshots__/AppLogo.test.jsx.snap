@@ -1,0 +1,34 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AppLogo component > matches snapshot for icon variant 1`] = `
+<div>
+  <div
+    class="_appLogo_7426b6 _icon_7426b6"
+  >
+    <img
+      alt="App logo"
+      loading="lazy"
+      src="logo-mock.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`AppLogo component > matches snapshot for withText variant 1`] = `
+<div>
+  <div
+    class="_appLogo_7426b6 _withText_7426b6"
+  >
+    <img
+      alt="App logo"
+      loading="lazy"
+      src="logo-mock.png"
+    />
+    <p
+      class="_appName_7426b6"
+    >
+      Sentinel
+    </p>
+  </div>
+</div>
+`;
