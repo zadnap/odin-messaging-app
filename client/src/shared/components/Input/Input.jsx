@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Input.module.scss';
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
-import { useState } from 'react';
+import { useId, useRef, useState } from 'react';
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 const Input = ({
   id,
+  name,
   value,
   onChange,
   type = 'text',
@@ -14,8 +15,16 @@ const Input = ({
   className = '',
   message = '',
 }) => {
+  const inputId = id ?? useId();
+  const inputRef = useRef(null);
   const [showPassword, setShowPassword] = useState(false);
-  const messageId = message ? `${id}-message` : undefined;
+  const [hasValue, setHasValue] = useState(false);
+  const messageId = message ? `${inputId}-message` : undefined;
+
+  const handleChange = (e) => {
+    setHasValue(e.target.value.length > 0);
+    onChange?.(e);
+  };
 
   return (
     <div className={`${styles.inputWrapper} ${styles[status]}`}>
@@ -27,9 +36,11 @@ const Input = ({
         `}
       >
         <input
-          id={id}
+          id={inputId}
+          name={name}
+          ref={inputRef}
           value={value}
-          onChange={onChange}
+          onChange={handleChange}
           type={type === 'password' && showPassword ? 'text' : type}
           placeholder=" "
           className={styles.input}
@@ -37,11 +48,11 @@ const Input = ({
           aria-invalid={status === 'error'}
         />
         {label && (
-          <label htmlFor={id} className={styles.label}>
+          <label htmlFor={inputId} className={styles.label}>
             {label}
           </label>
         )}
-        {!value && status === 'error' && (
+        {!hasValue && status === 'error' && (
           <span
             className={styles.stateIcon}
             aria-hidden
@@ -50,7 +61,7 @@ const Input = ({
             <FontAwesomeIcon icon={faCircleExclamation} />
           </span>
         )}
-        {value && type === 'password' && (
+        {hasValue && type === 'password' && (
           <button
             type="button"
             className={styles.togglePassword}
