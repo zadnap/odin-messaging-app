@@ -1,15 +1,15 @@
 import AuthBanner from './AuthBanner/AuthBanner';
 import AuthForm from './AuthForm/AuthForm';
 import AuthSwitch from './AuthSwitch/AuthSwitch';
-import LoginForm from './LoginForm/LoginForm';
-import LoginOptions from './LoginOptions/LoginOptions';
-import RegisterForm from './RegisterForm/RegisterForm';
+import SignInForm from './SignInForm/SignInForm';
+import SignInOptions from './SignInOptions/SignInOptions';
+import SignUpForm from './SignUpForm/SignUpForm';
 
 export {
   AuthBanner,
   AuthForm,
   AuthSwitch,
-  LoginForm,
-  LoginOptions,
-  RegisterForm,
+  SignInForm,
+  SignInOptions,
+  SignUpForm,
 };

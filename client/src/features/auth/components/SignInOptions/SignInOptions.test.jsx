@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
-import LoginOptions from './LoginOptions';
+import SignInOptions from './SignInOptions';
 
-describe('LoginOptions', () => {
+describe('SignInOptions', () => {
   test('renders remember me checkbox and forgot password link', () => {
     render(
       <MemoryRouter>
-        <LoginOptions />
+        <SignInOptions />
       </MemoryRouter>
     );
 

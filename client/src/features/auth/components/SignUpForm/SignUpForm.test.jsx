@@ -1,9 +1,9 @@
 import { screen, render } from '@testing-library/react';
-import RegisterForm from './RegisterForm';
+import SignUpForm from './SignUpForm';
 
-describe('RegisterForm', () => {
-  test('renders register form fields', () => {
-    render(<RegisterForm />);
+describe('SignUpForm', () => {
+  test('renders sign-up form fields', () => {
+    render(<SignUpForm />);
 
     expect(screen.getByLabelText('Email')).toBeInTheDocument();
     expect(screen.getByLabelText('Password')).toBeInTheDocument();

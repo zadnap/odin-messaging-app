@@ -1,6 +1,6 @@
-import { AuthForm, AuthSwitch, LoginForm } from '../../components';
+import { AuthForm, AuthSwitch, SignInForm } from '../../components';
 
-const LoginPage = () => {
+const SignInPage = () => {
   return (
     <AuthForm
       title="Welcome Back"
@@ -9,13 +9,13 @@ const LoginPage = () => {
         <AuthSwitch
           text="Don't have an account?"
           linkText="Sign Up"
-          to="/auth/register"
+          to="/auth/sign-up"
         />
       }
     >
-      <LoginForm />
+      <SignInForm />
     </AuthForm>
   );
 };
 
-export default LoginPage;
+export default SignInPage;

@@ -1,12 +1,12 @@
 import { screen, render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
-import LoginForm from './LoginForm';
+import SignInForm from './SignInForm';
 
-describe('LoginForm', () => {
-  test('renders login form fields', () => {
+describe('SignInForm', () => {
+  test('renders sign-in form fields', () => {
     render(
       <MemoryRouter>
-        <LoginForm />
+        <SignInForm />
       </MemoryRouter>
     );
 

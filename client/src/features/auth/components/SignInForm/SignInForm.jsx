@@ -1,31 +1,28 @@
 import { Button, Divider, Input } from '@/shared/components';
-import styles from './RegisterForm.module.scss';
+import styles from './SignInForm.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { SignInOptions } from '..';
 
-const RegisterForm = () => {
+const SignInForm = () => {
   return (
-    <form className={styles.registerForm}>
+    <form className={styles.signInForm}>
       <div className={styles.group}>
-        <Input name="email" label="Email" type="email" />
+        <Input name="email" label="Email" />
         <Input name="password" label="Password" type="password" />
-        <Input
-          name="confirmPassword"
-          label="Confirm Password"
-          type="password"
-        />
+        <SignInOptions />
       </div>
       <div className={styles.group}>
         <Button type="submit" variant="accent">
-          Sign Up
+          Sign In
         </Button>
         <Divider />
         <Button variant="outline">
-          <FontAwesomeIcon icon={faGoogle} /> Sign up with Google
+          <FontAwesomeIcon icon={faGoogle} /> Sign in with Google
         </Button>
       </div>
     </form>
   );
 };
 
-export default RegisterForm;
+export default SignInForm;

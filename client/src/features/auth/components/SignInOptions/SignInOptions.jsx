@@ -1,10 +1,10 @@
 import { CheckBox } from '@/shared/components';
-import styles from './LoginOptions.module.scss';
+import styles from './SignInOptions.module.scss';
 import { Link } from 'react-router';
 
-const LoginOptions = () => {
+const SignInOptions = () => {
   return (
-    <div className={styles.loginOptions}>
+    <div className={styles.signInOptions}>
       <CheckBox label="Remember me" name="remember" />
       <Link to="/auth/forgot-password" className={styles.forgotPasswordLink}>
         Forgot Password
@@ -13,4 +13,4 @@ const LoginOptions = () => {
   );
 };
 
-export default LoginOptions;
+export default SignInOptions;

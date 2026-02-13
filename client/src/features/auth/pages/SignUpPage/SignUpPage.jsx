@@ -1,6 +1,6 @@
-import { AuthForm, AuthSwitch, RegisterForm } from '../../components';
+import { AuthForm, AuthSwitch, SignUpForm } from '../../components';
 
-const RegisterPage = () => {
+const SignUpPage = () => {
   return (
     <AuthForm
       title="Create an Account"
@@ -9,13 +9,13 @@ const RegisterPage = () => {
         <AuthSwitch
           text="Already have an account?"
           linkText="Sign In"
-          to="/auth/login"
+          to="/auth/sign-in"
         />
       }
     >
-      <RegisterForm />
+      <SignUpForm />
     </AuthForm>
   );
 };
 
-export default RegisterPage;
+export default SignUpPage;

@@ -1,5 +1,5 @@
 import { AuthLayout } from '@/shared/layouts';
-import { LoginPage, RegisterPage } from './pages';
+import { SignInPage, SignUpPage } from './pages';
 import { Navigate } from 'react-router';
 
 export const authRoutes = [
@@ -9,15 +9,15 @@ export const authRoutes = [
     children: [
       {
         index: true,
-        element: <Navigate to="login" replace />,
+        element: <Navigate to="sign-in" replace />,
       },
       {
-        path: 'register',
-        element: <RegisterPage />,
+        path: 'sign-up',
+        element: <SignUpPage />,
       },
       {
-        path: 'login',
-        element: <LoginPage />,
+        path: 'sign-in',
+        element: <SignInPage />,
       },
     ],
   },
