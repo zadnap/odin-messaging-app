@@ -2,12 +2,6 @@ import { screen, render } from '@testing-library/react';
 import AuthBanner from './AuthBanner';
 
 describe('AuthBanner component', () => {
-  test('matches snapshot', () => {
-    const { container } = render(<AuthBanner />);
-
-    expect(container).toMatchSnapshot();
-  });
-
   test('renders the main heading', () => {
     render(<AuthBanner />);
 
@@ -41,5 +35,11 @@ describe('AuthBanner component', () => {
 
     const divider = document.querySelector('[aria-hidden="true"]');
     expect(divider).toBeInTheDocument();
+  });
+
+  test('matches snapshot', () => {
+    const { container } = render(<AuthBanner />);
+
+    expect(container).toMatchSnapshot();
   });
 });
