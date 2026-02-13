@@ -1,0 +1,14 @@
+.loginOptions {
+  display: flex;
+  justify-content: space-between;
+
+  .forgotPasswordLink {
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
