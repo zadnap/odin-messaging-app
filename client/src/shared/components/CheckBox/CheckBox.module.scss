@@ -1,0 +1,13 @@
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+
+  .checkBox {
+    accent-color: var(--color-accent);
+  }
+
+  .label {
+    font-size: var(--text-sm);
+  }
+}
