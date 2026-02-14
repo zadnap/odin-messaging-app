@@ -7,7 +7,7 @@ describe('ForgotPasswordForm', () => {
 
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
     expect(
-      screen.getByRole('button', { name: /reset password/i })
+      screen.getByRole('button', { name: /get link/i })
     ).toBeInTheDocument();
   });
 });

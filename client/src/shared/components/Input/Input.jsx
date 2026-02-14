@@ -18,7 +18,7 @@ const Input = ({
   const inputId = id ?? useId();
   const inputRef = useRef(null);
   const [showPassword, setShowPassword] = useState(false);
-  const [hasValue, setHasValue] = useState(false);
+  const [hasValue, setHasValue] = useState(Boolean(value));
   const messageId = message ? `${inputId}-message` : undefined;
 
   const handleChange = (e) => {
