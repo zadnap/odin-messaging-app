@@ -25,5 +25,10 @@
         font-size: var(--text-sm);
       }
     }
+
+    .formContent {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

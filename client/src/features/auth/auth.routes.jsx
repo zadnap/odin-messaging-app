@@ -2,6 +2,7 @@ import { AuthLayout } from '@/shared/layouts';
 import {
   ForgotPasswordPage,
   ResetPasswordPage,
+  ResetPasswordSuccessPage,
   SignInPage,
   SignUpPage,
 } from './pages';
@@ -31,6 +32,10 @@ export const authRoutes = [
       {
         path: 'reset-password',
         element: <ResetPasswordPage />,
+      },
+      {
+        path: 'reset-password/success',
+        element: <ResetPasswordSuccessPage />,
       },
     ],
   },
