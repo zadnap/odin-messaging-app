@@ -1,10 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import AuthForm from './AuthForm';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 describe('AuthForm', () => {
-  test('renders title, subtitle, children and footer', () => {
+  test('renders icon, title, subtitle, children and footer', () => {
     render(
       <AuthForm
+        icon={faLock}
         title="Login"
         subtitle="Welcome back"
         footer={<div>Footer</div>}
@@ -13,6 +15,7 @@ describe('AuthForm', () => {
       </AuthForm>
     );
 
+    expect(screen.getByTestId('auth-form-icon')).toBeInTheDocument();
     expect(screen.getByText('Login')).toBeInTheDocument();
     expect(screen.getByText('Welcome back')).toBeInTheDocument();
     expect(screen.getByText('Form content')).toBeInTheDocument();
