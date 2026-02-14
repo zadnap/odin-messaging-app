@@ -5,6 +5,7 @@ import {
   ResetPasswordSuccessPage,
   SignInPage,
   SignUpPage,
+  VerifyEmailPage,
 } from './pages';
 import { Navigate } from 'react-router';
 
@@ -36,6 +37,10 @@ export const authRoutes = [
       {
         path: 'reset-password/success',
         element: <ResetPasswordSuccessPage />,
+      },
+      {
+        path: 'verify-email',
+        element: <VerifyEmailPage />,
       },
     ],
   },
