@@ -6,6 +6,7 @@ import {
   SignInPage,
   SignUpPage,
   VerifyEmailPage,
+  VerifyEmailSuccessPage,
 } from './pages';
 import { Navigate } from 'react-router';
 
@@ -41,6 +42,10 @@ export const authRoutes = [
       {
         path: 'verify-email',
         element: <VerifyEmailPage />,
+      },
+      {
+        path: 'verify-email/success',
+        element: <VerifyEmailSuccessPage />,
       },
     ],
   },

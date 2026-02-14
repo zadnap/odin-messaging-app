@@ -4,6 +4,7 @@ import ResetPasswordSuccessPage from './ResetPasswordSuccessPage/ResetPasswordSu
 import SignInPage from './SignInPage/SignInPage';
 import SignUpPage from './SignUpPage/SignUpPage';
 import VerifyEmailPage from './VerifyEmailPage/VerifyEmaiPage';
+import VerifyEmailSuccessPage from './VerifyEmailSuccessPage/VerifyEmailSuccessPage';
 
 export {
   ForgotPasswordPage,
@@ -12,4 +13,5 @@ export {
   SignInPage,
   SignUpPage,
   VerifyEmailPage,
+  VerifyEmailSuccessPage,
 };
