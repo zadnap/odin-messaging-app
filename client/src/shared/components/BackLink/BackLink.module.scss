@@ -1,0 +1,23 @@
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: background-color ease 0.2s;
+
+  .icon {
+    transition: transform ease 0.2s;
+  }
+
+  &:hover {
+    .icon {
+      transform: translateX(-2px);
+    }
+
+    background-color: var(--color-bg-surface);
+  }
+}
