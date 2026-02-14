@@ -1,3 +1,5 @@
+@use '@/shared/styles/mixins/media' as *;
+
 .authBanner {
   flex: 1;
   display: flex;
@@ -42,5 +44,9 @@
       font-size: var(--text-sm);
       font-weight: var(--font-thin);
     }
+  }
+
+  @include respond(sm) {
+    display: none;
   }
 }
