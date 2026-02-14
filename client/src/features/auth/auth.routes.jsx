@@ -1,5 +1,5 @@
 import { AuthLayout } from '@/shared/layouts';
-import { SignInPage, SignUpPage } from './pages';
+import { ForgotPasswordPage, SignInPage, SignUpPage } from './pages';
 import { Navigate } from 'react-router';
 
 export const authRoutes = [
@@ -18,6 +18,10 @@ export const authRoutes = [
       {
         path: 'sign-in',
         element: <SignInPage />,
+      },
+      {
+        path: 'forgot-password',
+        element: <ForgotPasswordPage />,
       },
     ],
   },
