@@ -38,4 +38,8 @@
   --color-subtext-on-dark: #{$gray-200};
   --color-border-on-dark: rgba(255, 255, 255, 0.6);
   --color-icon-on-dark: #{$white};
+
+  --color-scrollbar-bg: #{$gray-200};
+  --color-scrollbar: #{$gray-500};
+  --color-scrollbar-hover: #{$gray-600};
 }

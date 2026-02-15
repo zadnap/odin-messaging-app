@@ -6,7 +6,8 @@
 @use './base/reset';
 @use './base/global';
 
-@use './utilities/srOnly';
-
 @use './themes/light';
 @use './themes/dark';
+
+@use './utilities/srOnly';
+@use './utilities/scrollbar';
