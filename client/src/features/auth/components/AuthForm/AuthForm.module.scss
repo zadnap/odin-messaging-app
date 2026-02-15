@@ -34,7 +34,7 @@
         font-size: var(--text-2xl);
         margin-bottom: var(--space-1);
 
-        @include respond(sm) {
+        @include respond(xs) {
           font-size: var(--text-xl);
         }
       }
@@ -47,6 +47,10 @@
     .formContent {
       display: flex;
       flex-direction: column;
+    }
+
+    @include respond(sm) {
+      max-width: 400px;
     }
   }
 
