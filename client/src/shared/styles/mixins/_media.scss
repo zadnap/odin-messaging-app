@@ -1,8 +1,9 @@
+@use 'sass:map';
 @use '../tokens/breakpoints' as *;
 
 @mixin respond($size) {
-  @if map-has-key($breakpoints, $size) {
-    @media (max-width: map-get($breakpoints, $size)) {
+  @if map.has-key($breakpoints, $size) {
+    @media (max-width: map.get($breakpoints, $size)) {
       @content;
     }
   } @else {
