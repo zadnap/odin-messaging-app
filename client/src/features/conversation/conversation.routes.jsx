@@ -4,7 +4,7 @@ import { ConversationLayout } from './layouts';
 
 export const conversationRoutes = [
   {
-    path: 'conversation',
+    path: 'conversations',
     element: <MainLayout />,
     children: [
       {
