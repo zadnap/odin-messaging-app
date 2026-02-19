@@ -17,6 +17,7 @@ const Input = ({
   const [showPassword, setShowPassword] = useState(false);
   const [hasValue, setHasValue] = useState(Boolean(value));
   const messageId = message ? `${inputId}-message` : undefined;
+  const isPassword = type === 'password';
 
   const handleChange = (e) => {
     setHasValue(e.target.value.length > 0);
@@ -28,7 +29,7 @@ const Input = ({
       <div
         className={`
           ${styles.inputControl} 
-          ${type === 'password' ? styles.isPassword : ''} 
+          ${isPassword ? styles.isPassword : ''} 
           ${className}
         `}
       >
@@ -38,7 +39,7 @@ const Input = ({
           ref={inputRef}
           value={value}
           onChange={handleChange}
-          type={type === 'password' && showPassword ? 'text' : type}
+          type={isPassword && showPassword ? 'text' : type}
           placeholder=" "
           className={styles.input}
           aria-describedby={messageId}
@@ -49,7 +50,8 @@ const Input = ({
             {label}
           </label>
         )}
-        {!hasValue && status === 'error' && (
+        {((!isPassword && status === 'error') ||
+          (!hasValue && status === 'error')) && (
           <span
             className={styles.stateIcon}
             aria-hidden
@@ -58,7 +60,7 @@ const Input = ({
             <i className="fi fi-sr-exclamation"></i>
           </span>
         )}
-        {hasValue && type === 'password' && (
+        {hasValue && isPassword && (
           <button
             type="button"
             className={styles.togglePassword}
