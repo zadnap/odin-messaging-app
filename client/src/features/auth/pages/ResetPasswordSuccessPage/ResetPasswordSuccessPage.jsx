@@ -1,14 +1,13 @@
 import { Button } from '@/shared/components';
 import { AuthForm } from '../../components';
 import { useNavigate } from 'react-router';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const ResetPasswordSuccessPage = () => {
   const navigate = useNavigate();
 
   return (
     <AuthForm
-      icon={faCheck}
+      icon={<i className="fi fi-br-check"></i>}
       title="Password reset!"
       subtitle="You've successfully created a new password click below to sign in"
     >

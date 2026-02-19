@@ -1,8 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Input.module.scss';
-import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
 import { useId, useRef, useState } from 'react';
-import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 const Input = ({
   id,
@@ -58,7 +55,7 @@ const Input = ({
             aria-hidden
             data-testid="error-icon"
           >
-            <FontAwesomeIcon icon={faCircleExclamation} />
+            <i className="fi fi-sr-exclamation"></i>
           </span>
         )}
         {hasValue && type === 'password' && (
@@ -68,7 +65,11 @@ const Input = ({
             onClick={() => setShowPassword(!showPassword)}
             aria-label={showPassword ? 'Hide password' : 'Show password'}
           >
-            <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+            {showPassword ? (
+              <i className="fi fi-rr-eye-crossed"></i>
+            ) : (
+              <i className="fi fi-rr-eye"></i>
+            )}
           </button>
         )}
       </div>

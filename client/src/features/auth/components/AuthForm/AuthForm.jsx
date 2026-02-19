@@ -1,6 +1,5 @@
 import { AppLogo } from '@/shared/components';
 import styles from './AuthForm.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const AuthForm = ({ icon, title, subtitle, children, footer }) => {
   return (
@@ -14,7 +13,7 @@ const AuthForm = ({ icon, title, subtitle, children, footer }) => {
               aria-hidden="true"
               data-testid="auth-form-icon"
             >
-              <FontAwesomeIcon icon={icon} />
+              {icon}
             </div>
           )}
           <h1>{title}</h1>

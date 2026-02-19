@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { routes } from './app/routes';
+import '@flaticon/flaticon-uicons/css/all/all.css';
 import './shared/styles/index.scss';
 
 const router = createBrowserRouter(routes);

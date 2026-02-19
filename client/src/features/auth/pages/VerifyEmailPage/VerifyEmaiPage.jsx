@@ -1,11 +1,10 @@
 import { BackLink, Button } from '@/shared/components';
 import { AuthForm } from '../../components';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 const VerifyEmailPage = () => {
   return (
     <AuthForm
-      icon={faEnvelope}
+      icon={<i className="fi fi-rr-envelope"></i>}
       title="Check your Email"
       subtitle={
         <>

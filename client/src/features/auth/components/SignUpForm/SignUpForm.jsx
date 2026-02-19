@@ -1,7 +1,5 @@
 import { Button, Divider, Input } from '@/shared/components';
 import styles from './SignUpForm.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 const SignUpForm = () => {
   return (
@@ -21,7 +19,7 @@ const SignUpForm = () => {
         </Button>
         <Divider />
         <Button variant="outline">
-          <FontAwesomeIcon icon={faGoogle} /> Sign up with Google
+          <i className="fi fi-brands-google"></i> Sign up with Google
         </Button>
       </div>
     </form>

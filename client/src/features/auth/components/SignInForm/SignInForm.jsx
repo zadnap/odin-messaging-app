@@ -1,7 +1,5 @@
 import { Button, Divider, Input } from '@/shared/components';
 import styles from './SignInForm.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { SignInOptions } from '..';
 
 const SignInForm = () => {
@@ -18,7 +16,7 @@ const SignInForm = () => {
         </Button>
         <Divider />
         <Button variant="outline">
-          <FontAwesomeIcon icon={faGoogle} /> Sign in with Google
+          <i className="fi fi-brands-google"></i> Sign in with Google
         </Button>
       </div>
     </form>
