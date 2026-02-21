@@ -1,2 +1,172 @@
 .appSidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-container);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2);
+
+    .appLogo {
+      display: flex;
+      transition: transform ease 0.2s;
+
+      &:hover {
+        transform: rotate(15deg);
+      }
+    }
+
+    .expandButton {
+      display: none;
+
+      .collapseIcon {
+        display: none;
+      }
+    }
+  }
+
+  .navigation {
+    flex: 1;
+    padding: var(--space-2);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+  }
+
+  footer {
+    padding: var(--space-2);
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .sidebarAction {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2);
+    text-decoration: none;
+    color: var(--color-text);
+    border-radius: var(--radius-sm);
+    transition:
+      color ease 0.2s,
+      background-color ease 0.2s;
+
+    .regularIcon {
+      display: flex;
+    }
+
+    .solidIcon {
+      display: none;
+    }
+
+    .label {
+      display: none;
+      line-height: 1;
+      font-size: var(--text-sm);
+    }
+
+    .badge {
+      position: absolute;
+      top: var(--space-1);
+      right: var(--space-1);
+      background-color: var(--color-accent);
+      width: 6px;
+      height: 6px;
+      border-radius: var(--radius-full);
+
+      .badgeText {
+        display: none;
+      }
+    }
+
+    &:hover {
+      background-color: var(--color-btn-outline-hover);
+    }
+
+    &:active {
+      background-color: var(--color-btn-outline-active);
+    }
+
+    &.active {
+      background-color: var(--color-text);
+      color: var(--color-bg-container);
+
+      .regularIcon {
+        display: none;
+      }
+
+      .solidIcon {
+        display: flex;
+      }
+    }
+  }
+
+  &:hover {
+    .appLogo {
+      display: none;
+    }
+
+    .expandButton {
+      display: flex;
+    }
+  }
+}
+
+.appSidebar.expanded {
+  min-width: 200px;
+
+  header {
+    .appLogo {
+      display: flex;
+    }
+
+    .expandButton {
+      display: flex;
+
+      .expandIcon {
+        display: none;
+      }
+
+      .collapseIcon {
+        display: flex;
+      }
+    }
+  }
+
+  .sidebarAction {
+    .label {
+      flex: 1;
+      display: flex;
+    }
+
+    .badge {
+      position: static;
+      display: flex;
+      justify-content: center;
+      color: var(--color-bg-container);
+      border-radius: var(--radius-sm);
+      padding: 2px var(--space-1);
+      font-size: var(--text-xs);
+      line-height: 1;
+      width: auto;
+      height: auto;
+      min-width: 2ch;
+
+      .badgeText {
+        display: flex;
+      }
+    }
+  }
 }
