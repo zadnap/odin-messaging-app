@@ -1,0 +1,110 @@
+.profileMenu {
+  position: relative;
+  font-size: var(--text-sm);
+
+  .menuTrigger {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    transition: opacity ease 0.2s;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    gap: var(--space-3);
+
+    .avatar {
+      width: 32px;
+      border-radius: 0;
+    }
+
+    .label {
+      display: none;
+    }
+
+    &:hover {
+      background-color: transparent;
+      opacity: 0.9;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
+    &.expanded {
+      transition: background-color ease 0.2s;
+
+      .label {
+        display: flex;
+      }
+
+      &:hover {
+        opacity: 1;
+        background-color: var(--color-btn-outline-hover);
+      }
+
+      &:active {
+        background-color: var(--color-btn-outline-active);
+      }
+    }
+  }
+
+  .menu {
+    background-color: var(--color-bg-container);
+    min-width: 200px;
+    border-radius: var(--radius-sm);
+    position: absolute;
+    bottom: calc(100% + var(--space-3));
+    padding: var(--space-1);
+    border: 1px solid var(--color-border);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+
+    .menuItem {
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+      padding: var(--space-1) var(--space-2);
+      border-radius: var(--radius-sm);
+      display: flex;
+      gap: var(--space-3);
+      align-items: center;
+      transition: background ease 0.2s;
+
+      &:hover {
+        background-color: var(--color-btn-outline-hover);
+      }
+
+      &:active {
+        background-color: var(--color-btn-outline-active);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: var(--space-3);
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid var(--color-border);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: var(--space-3);
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid var(--color-bg-container);
+    }
+  }
+}

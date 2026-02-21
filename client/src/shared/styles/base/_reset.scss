@@ -73,3 +73,13 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/*
+  11. Remove default list style
+*/
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

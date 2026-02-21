@@ -5,5 +5,15 @@ import Button from './Button/Button';
 import CheckBox from './CheckBox/CheckBox';
 import Divider from './Divider/Divider';
 import Input from './Input/Input';
+import ProfileMenu from './ProfileMenu/ProfileMenu';
 
-export { AppLogo, AppSidebar, BackLink, Button, CheckBox, Divider, Input };
+export {
+  AppLogo,
+  AppSidebar,
+  BackLink,
+  Button,
+  CheckBox,
+  Divider,
+  Input,
+  ProfileMenu,
+};
