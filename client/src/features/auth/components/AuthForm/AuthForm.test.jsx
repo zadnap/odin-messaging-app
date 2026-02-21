@@ -1,12 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import AuthForm from './AuthForm';
-import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 describe('AuthForm', () => {
   test('renders icon, title, subtitle, children and footer', () => {
     render(
       <AuthForm
-        icon={faLock}
+        icon={<span>Lock Icon</span>}
         title="Login"
         subtitle="Welcome back"
         footer={<div>Footer</div>}

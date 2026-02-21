@@ -59,21 +59,6 @@ describe('Input component', () => {
     ).not.toBeInTheDocument();
   });
 
-  test('does not show error icon when value exists', () => {
-    render(
-      <Input
-        id="email"
-        label="Email"
-        value="test@test.com"
-        status="error"
-        message="Invalid email"
-        onChange={() => {}}
-      />
-    );
-
-    expect(screen.queryByTestId('error-icon')).not.toBeInTheDocument();
-  });
-
   test('toggles password visibility', async () => {
     const user = userEvent.setup();
 

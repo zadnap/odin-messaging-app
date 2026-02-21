@@ -14,6 +14,6 @@ describe('BackLink component', () => {
     const link = screen.getByRole('link', { name: /back to sign in/i });
     expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute('href', '/auth/sign-in');
-    expect(link.querySelector('svg')).toBeInTheDocument();
+    expect(link.querySelector('i')).toBeInTheDocument();
   });
 });
